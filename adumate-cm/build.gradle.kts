@@ -22,7 +22,10 @@ configurations {
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
+
+extra["springCloudVersion"] = "2022.0.3"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-batch")
@@ -46,6 +49,12 @@ dependencies {
 	testImplementation("org.springframework.batch:spring-batch-test")
 	testImplementation("org.springframework.kafka:spring-kafka-test")
 	testImplementation("org.springframework.security:spring-security-test")
+}
+
+dependencyManagement {
+	imports {
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+	}
 }
 
 tasks.withType<KotlinCompile> {
