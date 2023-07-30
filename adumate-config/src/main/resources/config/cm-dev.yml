@@ -1,0 +1,17 @@
+server:
+  port: 9001
+  servlet:
+    context-path: "/cm"
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /api-doc-ui.html
+  spring:
+    data:
+      mongodb:
+        host: localhost
+        port: 27017
+        database: medrem
+  debug: true
