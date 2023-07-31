@@ -8,7 +8,6 @@ plugins {
 }
 
 group = "com.adumate"
-version = "0.0.1-SNAPSHOT"
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
@@ -26,11 +25,14 @@ repositories {
 }
 
 extra["springCloudVersion"] = "2022.0.3"
+val commonLibVersion="1.0.0-SNAPSHOT"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.cloud:spring-cloud-config-server")
+	implementation("com.adumate:common-lib:$commonLibVersion")
+
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
