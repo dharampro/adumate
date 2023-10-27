@@ -13,5 +13,5 @@ springdoc:
       mongodb:
         host: localhost
         port: 27017
-        database: medrem
+        database: adumate
   debug: true

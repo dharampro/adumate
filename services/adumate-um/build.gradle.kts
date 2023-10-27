@@ -32,7 +32,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    implementation("org.springframework.cloud:spring-cloud-starter-config")
+//    implementation("org.springframework.cloud:spring-cloud-starter-config")
 //	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
     implementation("com.adumate:common-lib:$commonLibVersion")
 
